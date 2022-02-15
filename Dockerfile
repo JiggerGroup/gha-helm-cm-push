@@ -10,7 +10,7 @@ RUN set -ex \
     && mv linux-amd64/helm /usr/local/bin/helm \
     && rm -rf linux-amd64
 
-RUN helm plugin install https://github.com/chartmuseum/helm-push
+# RUN helm plugin install https://github.com/chartmuseum/helm-push
 
 COPY entrypoint.sh /entrypoint.sh
 
