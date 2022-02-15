@@ -1,0 +1,9 @@
+# action.yml
+name: 'Jigger - Helm Tools - Push'
+description: 'Pushes a local chart to a ChartMusem or OCI compatible registry. Supports token based auth and Chart.yaml version override.'
+branding:
+  color: 'green'
+  icon: 'upload-cloud'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
