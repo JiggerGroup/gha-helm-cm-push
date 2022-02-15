@@ -6,8 +6,8 @@ if [ -z "${CHART_FOLDER}" ]; then
   exit 1
 fi
 
-if [ -z "${REGISTRY_URL}" ]; then
-  echo "Repository url is required but not defined."
+if [ -z "${REGISTRY_ADDRESS}" ]; then
+  echo "Repository address is required but not defined."
   exit 1
 fi
 
