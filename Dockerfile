@@ -1,7 +1,4 @@
-FROM plugins/base:linux-amd64
-
-ENV XDG_DATA_HOME=/opt/xdg
-ENV XDG_CACHE_HOME=/opt/xdg
+FROM alpine:latest
 
 RUN apk add curl tar bash git --no-cache
 
@@ -10,9 +7,9 @@ RUN set -ex \
     && mv linux-amd64/helm /usr/local/bin/helm \
     && rm -rf linux-amd64
 
-ENV HELM_PLUGINS=/root/.local/share/helm/plugins
+# ENV HELM_PLUGINS=/root/.local/share/helm/plugins
 
-RUN helm plugin install https://github.com/chartmuseum/helm-push
+RUN helm plugin install https://github.com/chartmuseum/helm-push --debug
 
 COPY entrypoint.sh /entrypoint.sh
 
